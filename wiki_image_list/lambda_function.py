@@ -23,7 +23,7 @@ def lambda_handler(event, context):
     for record in event['records']:
 
        # Event is encoded, so we decode here
-       payload=pt.format_input(record["data"])
+       payload = pt.format_input(record["data"])
  
        # Get the page title so we can call MW API
        page_title = json.loads(payload)['title']

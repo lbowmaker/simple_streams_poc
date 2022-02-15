@@ -27,7 +27,7 @@ python stream_processor.py
 
 **3. AWS Lambda**
 
-AWS Lambda function that listens to the stream, get associated article images and outputs the data
+AWS Lambda function that listens to the stream, gets associated article images and outputs the data
 
 ```python
 """Simple event handler.

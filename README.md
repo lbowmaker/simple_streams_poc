@@ -68,6 +68,7 @@ Can subscribe to the stream or query key/value store to see state of images at a
 - AWS Lambda UI is nice for less experienced developers to create something quickly but it's not industry standard and abstracts somethings that might be useful to learn (writing tests, commiting to repo's, etc)
 - Even though lots of technical things are abstracted you would need someone to manage roles and access which gets quite complicated/involved easily
 - Didn't seem that the code editor UI would make for good collaboration unless you managed code externally
+- Streams web UI provides a nice interface to the streams, the API and actual data - Kinesis didn't really do this without digging around in logs/execution pages
 
 ### Pros
 
@@ -75,3 +76,9 @@ Can subscribe to the stream or query key/value store to see state of images at a
 - Allows easy backfilling of streams from timestamp or message id
 - Took less than a day to cobble something together
 - Can deploy AWS Lambda functions as HTTP endpoints so they could be used elsewhere (not just events)
+
+## Things we might want to copy...
+
+- Easy self service of input event stream > execute process > output somewhere (file store, database, other stream)
+- Allow services to start up against timestamp from stream (not every service will need all of the data back to day 1)
+- Endpoints aren't tied to just event stream execution, can be called independently like an API

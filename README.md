@@ -31,7 +31,7 @@ AWS Lambda function that listens to the stream, gets associated article images a
 
 https://github.com/lbowmaker/simple_streams_poc/blob/ae21d3eca23e9e30f285e6b9778dafd72f2de2ca/wiki_image_list/lambda_function.py#L1-L42
 
-**5. Create a Data Delivery Stream
+**5. Create a Data Delivery Stream**
 
 An AWS delivery stream calls the AWS Lamba function (wiki_image_list - see code above) on event trigger and writes the output to an S3 bucket (for ease).
 

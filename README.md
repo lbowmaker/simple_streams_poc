@@ -33,15 +33,15 @@ AWS Lambda function that listens to the stream, gets associated article images a
 
 https://github.com/lbowmaker/simple_streams_poc/blob/ae21d3eca23e9e30f285e6b9778dafd72f2de2ca/wiki_image_list/lambda_function.py#L1-L42
 
-**5. Create a Data Delivery Stream**
+**4. Create a Data Delivery Stream**
 
 An AWS delivery stream calls the AWS Lamba function (wiki_image_list - see code above) on event trigger and writes the output to an S3 bucket (for ease).
 
 ![ Kinesis_Delivery_Stream](https://user-images.githubusercontent.com/93719848/154101477-98de0110-bd5f-411f-9fcb-fc8a526bb6c1.png)
 
-**6. Review output schema:**
+**5. Review output schema:**
 
-Our process outputs data in this format:
+The process outputs data in this format:
 
 ```json
 {
@@ -55,7 +55,7 @@ Our process outputs data in this format:
 }
 ```
 
-**7. Consumers**
+**6. Consumers**
 
 Can subscribe to the stream or query key/value store to see state of images at a given time
 

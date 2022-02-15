@@ -77,8 +77,8 @@ def format_image_list(image_json):
     page_id = '-1'
 
     try:
-
         keys = list(image_json['query']['pages'].keys())
+        
         page_id = keys[0]
 
         image_list = image_json['query']['pages'][page_id]['images']

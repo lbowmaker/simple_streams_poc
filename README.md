@@ -25,6 +25,8 @@ export STREAM_NAME=???
 python stream_processor.py
 ```
 
+https://github.com/lbowmaker/simple_streams_poc/blob/f9516e64ed5801a72f1efb55cd92443e5182c129/stream_processor.py#L43-L46
+
 **3. AWS Lambda**
 
 AWS Lambda function that listens to the stream, gets associated article images and outputs the data
@@ -61,9 +63,9 @@ Can subscribe to the stream or query key/value store to see state of images at a
 
 ### Cons
 
+- Couldn't use Python 3.8 requests module in AWS Lambda, had to use Py3.6 and botocore.vendored requests. Seems like you would have to manage Python changes on top of the Amazon implementation of it which could be challenging (I suspect there are other instances of this too)
 - Seemed too easy to create streams that didn't have a schema associated to them
-- Couldn't use Python requests in AWS Lambda, had to use Py3.6 and botocore.vendored import requests. Seems like you would have to manage Python changes on top of Amazon implementation of it which could be challenging (I suspect there are other instances of this too).
-- Python error messages less verbose in AWS Lambda
+- Python error messages less verbose in AWS Lambda in some cases
 - AWS Lambda UI is nice for less experienced developers to create something quickly but it's not industry standard and abstracts somethings that might be useful to learn (writing tests, commiting to repo's, etc)
 - Even though lots of technical things are abstracted you would need someone to manage roles and access which gets quite complicated/involved easily
 - Didn't seem that the code editor UI would make for good collaboration unless you managed code externally

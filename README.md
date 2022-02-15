@@ -6,7 +6,7 @@ To run this process you will need an AWS Kinesis stream to write to.
 
 The process can be run as follows:
 
-**1. Create a data stream in AWS Kinesis:**
+**1. Create a data stream in AWS Kinesis**
 
 ![Kinesis_Data_Stream](https://user-images.githubusercontent.com/93719848/154076403-effbaac4-95a9-47e9-b71d-bedf68e605e1.png)
 
@@ -56,7 +56,6 @@ Our process outputs data in this format:
 **7. Consumers**
 
 Can subscribe to the stream or query key/value store to see state of images at a given time
-
 
 ## Conclusions
 
